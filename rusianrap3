@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+ int aaa[10];
+ for(int i = 0; i < 10; i++){
+     cout<<"enter number - ";
+     int num;
+     cin>>num;
+     aaa[i] = num;
+ }
+ for(int j = 0;j < 10 ;j++){
+   for(int i = 1; i < 10 ;i++){
+    if(aaa[i - 1] > aaa[i]){
+        int x = aaa[i - 1];
+        aaa[i - 1] = aaa[i];
+           aaa[i] = x;
+       }
+   }
+ }
+ for(int i = 0; i < 10 ;i++){
+     cout << aaa[i] << " ";
+ }
+}
